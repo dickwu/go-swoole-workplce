@@ -19,9 +19,6 @@ RUN apt -y install lsb-release apt-transport-https ca-certificates && \
 # php protobuf
 RUN pecl install protobuf && \
 	echo "extension=protobuf" > /etc/php/7.4/cli/conf.d/20-protobuf.ini
-# php imagick
-RUN echo "" | pecl install imagick && \
-	echo "extension=imagick" > /etc/php/7.4/cli/conf.d/20-imagick.ini
 # php igbinary
 RUN echo no | pecl install igbinary && \
 	echo "extension=igbinary" > /etc/php/7.4/cli/conf.d/20-igbinary.ini
