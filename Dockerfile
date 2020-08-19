@@ -12,7 +12,7 @@ ENV SWOOLE_VERSION=4.5.2
 # php
 RUN apt -y install lsb-release apt-transport-https ca-certificates && \
 	wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
-	echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list && \
+	echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list && \
 	apt update && \
 	apt install -q -y composer php7.4 php7.4-dev php7.4-mysql php7.4-bcmath php7.4-bz2 php7.4-curl php7.4-gd php7.4-mbstring php7.4-zip php7.4-xmlreader
 
